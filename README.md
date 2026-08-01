@@ -4,6 +4,20 @@
 
 ---
 
+# 피그마 주소
+https://www.figma.com/design/Ji8cqNFdc97doPus3qjwr1/-Project-A--AI-%EA%B8%B0%EB%B0%98-UI-UX-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%8B%9C%EC%95%88-%EC%A0%9C%EC%9E%91?node-id=10-7&t=fkbS8GPpapVK3Di1-1
+
+---
+
+# 깃허브 액션
+
+---
+
+# png 파일은  
+/src/assets/ 파일 내부로 대체함
+
+---
+
 ## 1. 프롬프트 최적화 로그 – 고객센터
 
 ### 수정전 / 수정후
