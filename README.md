@@ -10,7 +10,7 @@ https://www.figma.com/design/Ji8cqNFdc97doPus3qjwr1/-Project-A--AI-%EA%B8%B0%EB%
 ---
 
 # 깃허브 액션
-
+https://birdcross.github.io/ssagda/
 ---
 
 # png 파일은  
