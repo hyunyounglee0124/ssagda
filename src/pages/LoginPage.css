@@ -1,0 +1,773 @@
+/* ========================================
+   로그인 페이지
+======================================== */
+
+.login-page {
+  width: 100%;
+  padding: 28px 0 36px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 153, 102, 0.10), transparent 20%),
+    radial-gradient(circle at 85% 18%, rgba(255, 210, 170, 0.14), transparent 22%),
+    radial-gradient(circle at 70% 80%, rgba(255, 180, 130, 0.10), transparent 20%),
+    linear-gradient(180deg, #fffaf7 0%, #fff6f0 100%);
+}
+
+.login-page button,
+.login-page input {
+  font: inherit;
+}
+
+/* ========================================
+   카드 레이아웃
+======================================== */
+
+.login-page__wrap {
+  width: min(1040px, calc(100% - 40px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  border: 1px solid #eadccf;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #fffdfb;
+  box-shadow:
+    0 24px 60px rgba(104, 66, 36, 0.10),
+    0 8px 24px rgba(104, 66, 36, 0.05);
+}
+
+/* ========================================
+   왼쪽 소개 영역
+======================================== */
+
+.login-page__intro {
+  position: relative;
+  padding: 52px 44px 36px;
+  background:
+    radial-gradient(circle at 14% 12%, rgba(255,255,255,0.30) 0 42px, transparent 43px),
+    radial-gradient(circle at 82% 18%, rgba(255,255,255,0.38) 0 54px, transparent 55px),
+    linear-gradient(145deg, #faead8 0%, #f5dcc0 100%);
+}
+
+.login-page__intro::before {
+  content: '';
+  position: absolute;
+  right: -55px;
+  bottom: -60px;
+  width: 220px;
+  height: 220px;
+  border: 26px solid rgba(255,255,255,0.14);
+  border-radius: 50%;
+}
+
+.login-page__intro::after {
+  content: '';
+  position: absolute;
+  top: 56px;
+  right: 46px;
+  width: 10px;
+  height: 10px;
+  background: #ff7a3a;
+  border-radius: 2px;
+  transform: rotate(28deg);
+  box-shadow:
+    -18px 32px 0 -1px #88d5a5,
+    14px 38px 0 -2px #ffc95f;
+}
+
+.login-page__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.login-page__eyebrow::before {
+  content: '';
+  width: 18px;
+  height: 2px;
+  border-radius: 99px;
+  background: var(--orange);
+}
+
+.login-page__intro h1 {
+  margin: 18px 0 16px;
+  color: #2f2924;
+  font-size: clamp(20px, 2.0vw, 36px);
+  font-weight: 900;
+  line-height: 1.22;
+  letter-spacing: -0.06em;
+}
+
+.login-page__intro > p {
+  margin: 0;
+  color: #756252;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* 혜택 리스트 */
+
+.login-page__benefits {
+  display: grid;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.login-page__benefits article {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255,255,255,0.65);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.40);
+  backdrop-filter: blur(4px);
+}
+
+.login-page__benefits article > span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.80);
+  flex: 0 0 auto;
+  font-size: 18px;
+}
+
+.login-page__benefits strong,
+.login-page__benefits small {
+  display: block;
+}
+
+.login-page__benefits strong {
+  margin-bottom: 4px;
+  color: #40352d;
+  font-size: 14px;
+}
+
+.login-page__benefits small {
+  color: #907b6d;
+  font-size: 11px;
+}
+
+/* 브랜드 박스 */
+
+.login-page__brand-box {
+  margin-top: 24px;
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.72);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.76);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
+}
+
+.login-page__brand-box .brand__logo-image {
+  width: 118px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.login-page__brand-box p {
+  margin: 4px 0 0;
+  color: #a28570;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+/* ========================================
+   오른쪽 폼 영역
+======================================== */
+
+.login-page__form {
+  padding: 54px 46px 38px;
+  background:
+    radial-gradient(circle at 100% 100%, rgba(255, 210, 170, 0.08), transparent 28%),
+    linear-gradient(180deg, #fffefd 0%, #fffaf6 100%);
+}
+
+.login-page__form-head {
+  margin-bottom: 26px;
+}
+
+.login-page__form-head > span {
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.login-page__form-head h2 {
+  margin: 10px 0 8px;
+  color: #29231f;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -0.055em;
+}
+
+.login-page__form-head p {
+  margin: 0;
+  color: #9a8e84;
+  font-size: 13px;
+}
+
+/* 입력 필드 */
+
+.login-page__field {
+  margin-bottom: 14px;
+}
+
+.login-page__field > label {
+  display: block;
+  margin-bottom: 8px;
+  color: #5f544c;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.login-page__input {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  border: 1px solid #e7dbd1;
+  border-radius: 12px;
+  background: #fff;
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease,
+    transform .2s ease;
+}
+
+.login-page__input:focus-within {
+  border-color: #ff9b6c;
+  box-shadow: 0 0 0 4px rgba(255, 91, 36, 0.08);
+}
+
+.login-page__input.is-error {
+  border-color: #de6140;
+  background: #fff8f5;
+}
+
+.login-page__input > span {
+  width: 18px;
+  color: #b09d90;
+  font-size: 14px;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.login-page__input input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #322a25;
+  font-size: 13px;
+}
+
+.login-page__input input::placeholder {
+  color: #b7aca4;
+}
+
+.login-page__toggle {
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #8f8177;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* 옵션 */
+
+.login-page__options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin: 6px 0 16px;
+}
+
+.login-page__options > button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: #8d8076;
+  font-size: 11px;
+}
+
+.login-page__options > button:hover {
+  color: var(--orange);
+}
+
+.login-page__check {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #756960;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.login-page__check input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.login-page__check span {
+  width: 16px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #dccfc6;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.login-page__check input:checked + span {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.login-page__check input:checked + span::after {
+  content: '';
+  width: 7px;
+  height: 4px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+/* 에러 */
+
+.login-page__error {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: -2px 0 12px;
+  color: #d94b20;
+  font-size: 11px;
+}
+
+.login-page__error span {
+  width: 16px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff0ea;
+  font-size: 10px;
+  font-weight: 900;
+  flex: 0 0 auto;
+}
+
+/* 로그인 버튼 */
+
+.login-page__submit {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff6b2f, #ff5520);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 12px 22px rgba(255, 85, 32, 0.20);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.login-page__submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(255, 85, 32, 0.26);
+}
+
+.login-page__submit strong {
+  font-size: 16px;
+}
+
+/* 구분선 */
+
+.login-page__divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 14px;
+  color: #a89d95;
+  font-size: 10px;
+}
+
+.login-page__divider::before,
+.login-page__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #eee4dc;
+}
+
+/* 소셜 로그인 */
+/* ========================================
+   소셜 로그인
+======================================== */
+
+.login-page__social {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.login-page__social-btn {
+  min-width: 0;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 12px;
+  border: 1px solid #e4d9d1;
+  border-radius: 10px;
+  background: #fff;
+  color: #443b35;
+  font-size: 12px;
+  font-weight: 800;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.login-page__social-btn:hover {
+  box-shadow: 0 8px 18px rgba(74, 51, 34, 0.1);
+  transform: translateY(-2px);
+}
+
+.login-page__social-icon {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 auto;
+}
+
+/* Google */
+
+.login-page__social-btn--google:hover {
+  border-color: #c9d8f3;
+  background: #fafdff;
+}
+
+/* Kakao */
+
+.login-page__social-btn--kakao {
+  border-color: #fee500;
+  background: #fee500;
+  color: #191919;
+}
+
+.login-page__social-btn--kakao .login-page__social-icon {
+  color: #191919;
+}
+
+.login-page__social-btn--kakao:hover {
+  border-color: #f4d900;
+  background: #f4d900;
+}
+
+/* Naver */
+
+.login-page__social-btn--naver {
+  border-color: #03c75a;
+  background: #03c75a;
+  color: #fff;
+}
+
+.login-page__social-btn--naver .login-page__social-icon {
+  color: #fff;
+}
+
+.login-page__social-btn--naver:hover {
+  border-color: #02b351;
+  background: #02b351;
+}
+
+/* ========================================
+   소셜 로그인 팝업
+======================================== */
+
+.social-login-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(38, 30, 25, 0.48);
+  backdrop-filter: blur(5px);
+  animation: social-overlay-show 0.18s ease;
+}
+
+.social-login-modal__card {
+  position: relative;
+  width: min(390px, 100%);
+  padding: 38px 32px 29px;
+  border: 1px solid #eadfd6;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 25px 65px rgba(46, 30, 20, 0.22);
+  text-align: center;
+  animation: social-card-show 0.22s ease;
+}
+
+.social-login-modal__close {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #f8f3ef;
+  color: #82756c;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.social-login-modal__close:hover {
+  background: #f1e8e1;
+  color: #3e342d;
+}
+
+.social-login-modal__logo {
+  width: 66px;
+  height: 66px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  border-radius: 18px;
+  font-size: 34px;
+}
+
+.social-login-modal__logo svg {
+  width: 34px;
+  height: 34px;
+}
+
+.social-login-modal__logo--google {
+  border: 1px solid #e4e8ef;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(55, 78, 118, 0.1);
+}
+
+.social-login-modal__logo--kakao {
+  background: #fee500;
+  color: #191919;
+}
+
+.social-login-modal__logo--naver {
+  background: #03c75a;
+  color: #fff;
+}
+
+.social-login-modal__card h2 {
+  margin: 0;
+  color: #29231f;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.social-login-modal__card > p {
+  margin: 10px 0 25px;
+  color: #8b7d72;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.social-login-modal__continue {
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.social-login-modal__continue--google {
+  border: 1px solid #dcdfe5;
+  background: #fff;
+  color: #3e3935;
+}
+
+.social-login-modal__continue--google:hover {
+  background: #f8fafc;
+}
+
+.social-login-modal__continue--kakao {
+  background: #fee500;
+  color: #191919;
+}
+
+.social-login-modal__continue--kakao:hover {
+  background: #f3d900;
+}
+
+.social-login-modal__continue--naver {
+  background: #03c75a;
+  color: #fff;
+}
+
+.social-login-modal__continue--naver:hover {
+  background: #02b351;
+}
+
+.social-login-modal__cancel {
+  margin-top: 13px;
+  padding: 5px 12px;
+  border: 0;
+  background: transparent;
+  color: #94877e;
+  font-size: 12px;
+}
+
+.social-login-modal__cancel:hover {
+  color: #4f443d;
+}
+
+@keyframes social-overlay-show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes social-card-show {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .login-page__social {
+    grid-template-columns: 1fr;
+  }
+
+  .social-login-modal__card {
+    padding: 35px 22px 26px;
+  }
+}
+
+/* 하단 링크 */
+
+.login-page__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 16px;
+}
+
+.login-page__links button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: #95887f;
+  font-size: 10px;
+}
+
+.login-page__links button:hover {
+  color: var(--orange);
+}
+
+.login-page__links i {
+  width: 1px;
+  height: 10px;
+  background: #e1d8d1;
+}
+
+.login-page__join {
+  margin: 18px 0 0;
+  text-align: center;
+  color: #91847b;
+  font-size: 11px;
+}
+
+.login-page__join button {
+  margin-left: 5px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--orange);
+  font-weight: 900;
+}
+
+/* ========================================
+   반응형
+======================================== */
+
+@media (max-width: 900px) {
+  .login-page {
+    padding: 18px 0 24px;
+  }
+
+  .login-page__wrap {
+    width: min(100%, calc(100% - 24px));
+    grid-template-columns: 1fr;
+  }
+
+  .login-page__intro {
+    padding: 40px 28px 28px;
+  }
+
+  .login-page__form {
+    padding: 40px 28px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-page__wrap {
+    border-radius: 22px;
+  }
+
+  .login-page__intro h1 {
+    font-size: 30px;
+  }
+
+  .login-page__intro > p br {
+    display: none;
+  }
+
+  .login-page__social {
+    grid-template-columns: 1fr;
+  }
+
+  .login-page__options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

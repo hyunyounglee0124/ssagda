@@ -1,0 +1,864 @@
+/* ========================================
+   이벤트 페이지 전체
+======================================== */
+
+.events-page {
+  width: 100%;
+  color: #171717;
+}
+
+/* ========================================
+   상단 이벤트 배너
+======================================== */
+
+.events-page .events-hero {
+  position: relative;
+  min-height: 248px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 42px 56px;
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      circle at 67% 77%,
+      rgba(74, 207, 215, 0.2) 0 62px,
+      transparent 63px
+    ),
+    radial-gradient(
+      circle at 86% 78%,
+      rgba(70, 171, 235, 0.16) 0 78px,
+      transparent 79px
+    ),
+    linear-gradient(
+      105deg,
+      #e1faef 0%,
+      #d7f9f2 28%,
+      #d8f7fa 57%,
+      #d9eeff 100%
+    );
+}
+
+.events-page .events-hero__content {
+  position: relative;
+  z-index: 5;
+  width: 50%;
+}
+
+.events-page .events-hero__content h1 {
+  margin: 0;
+  color: #171b1d;
+  font-size: clamp(34px, 3.2vw, 42px);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.06em;
+}
+
+.events-page .events-hero__content p {
+  margin: 13px 0 25px;
+  color: #5f686b;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.65;
+  letter-spacing: -0.025em;
+}
+
+/* 쿠폰 받기 버튼 */
+
+.events-page .events-hero__button {
+  min-width: 127px;
+  height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff661b, #ff4813);
+  box-shadow:
+    0 8px 15px rgba(255, 83, 24, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.events-page .events-hero__button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ff7428, #ef3d0c);
+  box-shadow: 0 11px 20px rgba(255, 83, 24, 0.3);
+  transform: translateY(-2px);
+}
+
+.events-page .events-hero__button:active:not(:disabled) {
+  box-shadow: 0 5px 10px rgba(255, 83, 24, 0.22);
+  transform: translateY(0);
+}
+
+.events-page .events-hero__button--received,
+.events-page .events-hero__button:disabled {
+  background: #8b989b;
+  box-shadow: none;
+  cursor: default;
+  transform: none;
+}
+
+/* ========================================
+   배너 오른쪽 그래픽 영역
+======================================== */
+
+.events-page .events-hero__visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 57%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* ========================================
+   쿠폰 티켓
+======================================== */
+
+.events-page .coupon-ticket {
+  position: absolute;
+  top: 43px;
+  right: 126px;
+  z-index: 5;
+  width: 286px;
+  height: 156px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.78);
+  border-radius: 18px 25px 25px 18px;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 8px,
+      rgba(255, 255, 255, 0.65) 8px,
+      rgba(255, 255, 255, 0.65) 14px
+    )
+    77% 0 / 2px 100% no-repeat,
+    linear-gradient(
+      145deg,
+      #ffae6d 0%,
+      #ff8546 38%,
+      #ff6731 68%,
+      #ff4628 100%
+    );
+  box-shadow:
+    0 19px 26px rgba(44, 143, 160, 0.23),
+    inset 0 0 0 1px rgba(178, 58, 24, 0.15);
+  transform: rotate(5deg);
+}
+
+/* 쿠폰 위쪽 홈 */
+
+.events-page .coupon-ticket::before {
+  position: absolute;
+  top: -15px;
+  left: 77%;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #d8f2fa;
+  content: "";
+  transform: translateX(-50%);
+}
+
+/* 쿠폰 아래쪽 홈 */
+
+.events-page .coupon-ticket::after {
+  position: absolute;
+  bottom: -15px;
+  left: 77%;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #c9ebf5;
+  content: "";
+  transform: translateX(-50%);
+}
+
+.events-page .coupon-ticket span {
+  position: relative;
+  z-index: 2;
+  margin-right: 23px;
+  color: #fff;
+  font-size: clamp(35px, 3.4vw, 46px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  text-shadow: 0 2px 3px rgba(151, 47, 20, 0.18);
+}
+
+/* ========================================
+   쿠폰 주변 리본
+======================================== */
+
+.events-page .coupon-ribbon {
+  position: absolute;
+  bottom: 43px;
+  left: 60px;
+  z-index: 4;
+  width: 79px;
+  height: 38px;
+  border-top: 10px solid #ff702c;
+  border-radius: 50%;
+  transform: rotate(16deg);
+}
+
+.events-page .coupon-ribbon::before {
+  position: absolute;
+  top: -20px;
+  right: -7px;
+  width: 23px;
+  height: 23px;
+  border-top: 8px solid #ff702c;
+  border-radius: 50%;
+  content: "";
+  transform: rotate(-55deg);
+}
+
+.events-page .coupon-ribbon::after {
+  position: absolute;
+  top: -22px;
+  left: -2px;
+  width: 14px;
+  height: 14px;
+  background: #ff9148;
+  content: "";
+  transform: rotate(55deg);
+}
+
+/* ========================================
+   배경 구름
+======================================== */
+
+.events-page .hero-cloud {
+  position: absolute;
+  z-index: 2;
+  bottom: 25px;
+  border-radius: 999px 999px 36px 36px;
+}
+
+.events-page .hero-cloud::before,
+.events-page .hero-cloud::after {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  content: "";
+}
+
+/* 왼쪽 구름 */
+
+.events-page .hero-cloud--left {
+  right: 255px;
+  width: 173px;
+  height: 66px;
+  background: rgba(72, 202, 216, 0.27);
+}
+
+.events-page .hero-cloud--left::before {
+  left: -48px;
+  width: 91px;
+  height: 91px;
+  background: rgba(72, 202, 216, 0.27);
+}
+
+.events-page .hero-cloud--left::after {
+  right: -38px;
+  width: 98px;
+  height: 98px;
+  background: rgba(72, 202, 216, 0.27);
+}
+
+/* 오른쪽 구름 */
+
+.events-page .hero-cloud--right {
+  right: 52px;
+  width: 156px;
+  height: 60px;
+  background: rgba(65, 164, 231, 0.17);
+}
+
+.events-page .hero-cloud--right::before {
+  left: -37px;
+  width: 84px;
+  height: 84px;
+  background: rgba(65, 164, 231, 0.17);
+}
+
+.events-page .hero-cloud--right::after {
+  right: -29px;
+  width: 92px;
+  height: 92px;
+  background: rgba(65, 164, 231, 0.17);
+}
+
+/* ========================================
+   작은 장식
+======================================== */
+
+.events-page .decoration {
+  position: absolute;
+  z-index: 3;
+  display: block;
+}
+
+.events-page .decoration--blue {
+  top: 52px;
+  left: 41px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #77d4f2;
+}
+
+.events-page .decoration--green {
+  top: 103px;
+  left: 135px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #98e48a;
+}
+
+.events-page .decoration--yellow {
+  top: 38px;
+  right: 96px;
+  width: 15px;
+  height: 15px;
+  background: #ffd250;
+  transform: rotate(45deg);
+  box-shadow: -367px 11px 0 2px #ffd64f;
+}
+
+.events-page .decoration--pink {
+  right: 72px;
+  bottom: 57px;
+  width: 17px;
+  height: 10px;
+  background: #ee68ac;
+  transform: rotate(17deg);
+  box-shadow:
+    -565px 4px 0 #ff7b53,
+    3px -66px 0 -2px #ffe25c,
+    -26px -31px 0 -2px #fff06b;
+}
+
+/* ========================================
+   진행 중인 이벤트 영역
+======================================== */
+
+.events-page .events-benefit {
+  padding: 30px 8px 0;
+}
+
+.events-page .events-benefit__heading {
+  margin-bottom: 30px;
+}
+
+.events-page .events-benefit__heading h2 {
+  margin: 0;
+  color: #171717;
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: -0.05em;
+}
+
+/* ========================================
+   쿠폰 카드 목록
+======================================== */
+
+.events-page .coupon-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 22px 30px;
+}
+
+/*
+  App.css 등에 남아 있는 기존 이모지 아이콘 제거
+  JSX의 SVG 아이콘만 표시
+*/
+
+.events-page .coupon-grid .coupon-card::before,
+.events-page .coupon-grid .coupon-card::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* 쿠폰 카드 */
+
+.events-page .coupon-grid .coupon-card {
+  position: relative;
+  min-width: 0;
+  min-height: 110px;
+
+  display: grid !important;
+  grid-template-columns: 64px minmax(0, 1fr) 112px !important;
+  grid-template-areas: "icon content value";
+  align-items: center !important;
+  justify-content: initial !important;
+  column-gap: 18px;
+
+  padding: 14px 18px !important;
+
+  border: 1px solid #e3e5e6;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow:
+    0 3px 9px rgba(28, 34, 38, 0.08),
+    0 1px 2px rgba(28, 34, 38, 0.04);
+
+  text-align: left !important;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.events-page .coupon-grid .coupon-card:hover {
+  border-color: #d8dcde;
+  box-shadow: 0 9px 20px rgba(28, 34, 38, 0.11);
+  transform: translateY(-3px);
+}
+
+/* ========================================
+   카드 왼쪽 아이콘
+======================================== */
+
+.events-page .coupon-card__icon {
+  grid-area: icon;
+
+  width: 64px;
+  height: 64px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  border-radius: 50%;
+}
+
+.events-page .coupon-card__icon svg {
+  display: block;
+  width: 46px;
+  height: 46px;
+  overflow: visible;
+
+  fill: none;
+  stroke: #30383b;
+  stroke-width: 2.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.events-page .coupon-card__icon .icon-fill {
+  stroke: none;
+}
+
+.events-page .coupon-card__icon .icon-white {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2.2;
+}
+
+.events-page .coupon-card__icon .free-text {
+  stroke: none;
+  font-size: 8px;
+  font-weight: 900;
+}
+
+/* ========================================
+   카드 가운데 글자
+======================================== */
+
+.events-page .coupon-card__content {
+  grid-area: content;
+  min-width: 0;
+  margin: 0;
+  text-align: left !important;
+}
+
+.events-page .coupon-card__content h3 {
+  margin: 0 0 8px;
+  color: #171717;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: -0.045em;
+  text-align: left !important;
+}
+
+.events-page .coupon-card__content p {
+  margin: 0;
+  color: #73787a;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  text-align: left !important;
+}
+
+/* ========================================
+   카드 오른쪽 금액
+======================================== */
+
+.events-page
+  .coupon-grid
+  .coupon-card
+  > .coupon-card__value {
+  grid-area: value;
+
+  width: 112px;
+  min-width: 112px;
+  height: 60px;
+  min-height: 60px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+
+  margin: 0;
+  padding: 0 12px !important;
+
+  border: 1px solid;
+  border-radius: 8px;
+
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ========================================
+   신규회원 카드
+======================================== */
+
+.events-page .coupon-card--member .coupon-card__icon {
+  background: #fff0eb;
+}
+
+.events-page .coupon-card--member .icon-fill {
+  fill: #ff641f;
+}
+
+.events-page
+  .coupon-grid
+  .coupon-card--member
+  > .coupon-card__value {
+  border-color: #ffd7c8;
+  background: linear-gradient(135deg, #fff8f4, #fff0e9);
+  color: #ff501d;
+}
+
+/* ========================================
+   장바구니 카드
+======================================== */
+
+.events-page .coupon-card--cart .coupon-card__icon {
+  background: #e8faf4;
+}
+
+.events-page .coupon-card--cart .coupon-card__icon svg {
+  stroke: #00b877;
+}
+
+.events-page .coupon-card--cart .icon-fill {
+  fill: #00b877;
+}
+
+.events-page
+  .coupon-grid
+  .coupon-card--cart
+  > .coupon-card__value {
+  border-color: #b9ebd8;
+  background: linear-gradient(135deg, #f0fff9, #e5fff3);
+  color: #00ad70;
+}
+
+/* ========================================
+   무료배송 카드
+======================================== */
+
+.events-page .coupon-card--delivery .coupon-card__icon {
+  background: #eaf4ff;
+}
+
+.events-page .coupon-card--delivery .coupon-card__icon svg {
+  stroke: #176fdf;
+}
+
+.events-page .coupon-card--delivery .free-text {
+  fill: #176fdf;
+}
+
+.events-page
+  .coupon-grid
+  .coupon-card--delivery
+  > .coupon-card__value {
+  border-color: #bfdbf9;
+  background: linear-gradient(135deg, #f2f9ff, #e8f4ff);
+  color: #176cdf;
+}
+
+/* ========================================
+   리뷰 적립 카드
+======================================== */
+
+.events-page .coupon-card--review .coupon-card__icon {
+  background: #fff8e5;
+}
+
+.events-page .coupon-card--review .icon-fill {
+  fill: #ffbd00;
+}
+
+.events-page
+  .coupon-grid
+  .coupon-card--review
+  > .coupon-card__value {
+  border-color: #f2e1a9;
+  background: linear-gradient(135deg, #fffdf4, #fff9e6);
+  color: #f3a000;
+}
+
+/* ========================================
+   반응형: 태블릿
+======================================== */
+
+@media (max-width: 1000px) {
+  .events-page .events-hero {
+    padding: 39px 40px;
+  }
+
+  .events-page .events-hero__content {
+    width: 48%;
+  }
+
+  .events-page .coupon-ticket {
+    top: 53px;
+    right: 60px;
+    width: 245px;
+    height: 135px;
+  }
+
+  .events-page .coupon-ticket span {
+    margin-right: 18px;
+    font-size: 37px;
+  }
+
+  .events-page .hero-cloud--left {
+    right: 205px;
+  }
+
+  .events-page .hero-cloud--right {
+    right: 20px;
+  }
+
+  .events-page .coupon-grid {
+    gap: 17px !important;
+  }
+
+  .events-page .coupon-grid .coupon-card {
+    grid-template-columns:
+      56px minmax(0, 1fr) 95px !important;
+    column-gap: 12px;
+    padding: 14px !important;
+  }
+
+  .events-page .coupon-card__icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .events-page .coupon-card__icon svg {
+    width: 41px;
+    height: 41px;
+  }
+
+  .events-page
+    .coupon-grid
+    .coupon-card
+    > .coupon-card__value {
+    width: 95px;
+    min-width: 95px;
+    height: 54px;
+    min-height: 54px;
+    padding: 0 9px !important;
+    font-size: 23px;
+  }
+
+  .events-page .coupon-card__content h3 {
+    font-size: 18px;
+  }
+
+  .events-page .coupon-card__content p {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   반응형: 모바일
+======================================== */
+
+@media (max-width: 760px) {
+  .events-page .events-hero {
+    min-height: 420px;
+    align-items: flex-start;
+    padding: 35px 27px;
+  }
+
+  .events-page .events-hero__content {
+    width: 100%;
+  }
+
+  .events-page .events-hero__content h1 {
+    font-size: 32px;
+  }
+
+  .events-page .events-hero__content p {
+    max-width: 310px;
+    margin-bottom: 18px;
+    font-size: 14px;
+  }
+
+  .events-page .events-hero__button {
+    min-width: 114px;
+    height: 44px;
+    padding: 0 19px;
+    font-size: 15px;
+  }
+
+  .events-page .events-hero__visual {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 220px;
+  }
+
+  .events-page .coupon-ticket {
+    top: 30px;
+    right: 50%;
+    width: 235px;
+    height: 126px;
+    transform: translateX(50%) rotate(4deg);
+  }
+
+  .events-page .coupon-ticket span {
+    margin-right: 17px;
+    font-size: 34px;
+  }
+
+  .events-page .coupon-ribbon {
+    left: calc(50% - 170px);
+    bottom: 38px;
+  }
+
+  .events-page .hero-cloud--left {
+    right: 50%;
+    transform: translateX(30%);
+  }
+
+  .events-page .hero-cloud--right {
+    right: calc(50% - 190px);
+  }
+
+  .events-page .coupon-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+
+  .events-page .coupon-grid .coupon-card {
+    grid-template-columns:
+      64px minmax(0, 1fr) 112px !important;
+    column-gap: 18px;
+    padding: 14px 18px !important;
+  }
+
+  .events-page .coupon-card__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .events-page .coupon-card__icon svg {
+    width: 46px;
+    height: 46px;
+  }
+
+  .events-page
+    .coupon-grid
+    .coupon-card
+    > .coupon-card__value {
+    width: 112px;
+    min-width: 112px;
+    height: 60px;
+    min-height: 60px;
+    font-size: 28px;
+  }
+}
+
+/* ========================================
+   반응형: 작은 모바일
+======================================== */
+
+@media (max-width: 480px) {
+  .events-page .events-benefit {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .events-page .events-benefit__heading h2 {
+    font-size: 21px;
+  }
+
+  .events-page .coupon-grid .coupon-card {
+    min-height: 100px;
+    grid-template-columns:
+      50px minmax(0, 1fr) 76px !important;
+    column-gap: 9px;
+    padding: 12px !important;
+  }
+
+  .events-page .coupon-card__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .events-page .coupon-card__icon svg {
+    width: 37px;
+    height: 37px;
+  }
+
+  .events-page .coupon-card__content h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  .events-page .coupon-card__content p {
+    font-size: 12px;
+  }
+
+  .events-page
+    .coupon-grid
+    .coupon-card
+    > .coupon-card__value {
+    width: 76px;
+    min-width: 76px;
+    height: 46px;
+    min-height: 46px;
+    padding: 0 6px !important;
+    font-size: 19px;
+  }
+}

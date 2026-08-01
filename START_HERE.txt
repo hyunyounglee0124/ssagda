@@ -1,0 +1,13 @@
+SSAGDA React 실행 방법
+
+1. 압축을 해제합니다.
+2. SSAGDA_React 폴더에서 터미널을 엽니다.
+3. npm install
+4. npm run dev
+5. 브라우저에서 표시되는 주소를 엽니다. (기본 http://localhost:5173)
+
+수정 위치
+- 화면 문구/구성: src/pages
+- 공통 헤더/상품카드: src/components
+- 상품 데이터: src/data.js
+- 색상/크기/반응형 디자인: src/styles.css
