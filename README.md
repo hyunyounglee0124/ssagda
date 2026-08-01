@@ -1,6 +1,113 @@
-# 작업로그 정리본
+<table class="project-info"> <tbody> <tr> <th>프로젝트명</th> <td>SSAGDA Web Shopping Mall Design</td> </tr>
 
-이승훈, 이미연, 이현영, 김수민, 이충훈
+  <tr>
+    <th>서비스 의미</th>
+    <td>“싹 다”를 영문 브랜드명으로 표현한 종합 판매 사이트</td>
+  </tr>
+
+  <tr>
+    <th>팀명 / 팀원</th>
+    <td>[SSAGDA] / [이승훈, 이미연, 이현영, 김수민, 이충훈]</td>
+  </tr>
+
+</tbody>
+
+</table>
+
+<h2>1. 프로젝트 개요</h2>
+
+<table class="project-overview"> <tbody> <tr> <th>서비스 한 줄 소개</th> <td>패션, 잡화, 리빙, 뷰티, 디지털, 식품 등 생활에 필요한 상품을 한곳에서 탐색하고 구매하는 종합 쇼핑몰</td> </tr>
+
+  <tr>
+    <th>핵심 사용자</th>
+    <td>여러 카테고리 상품을 한 번에 비교하고 빠르게 구매하려는 온라인 쇼핑 사용자</td>
+  </tr>
+
+  <tr>
+    <th>핵심 가치</th>
+    <td>다양한 상품을 “싹 다” 제공하는 편리함, 명확한 정보 구조, 빠른 구매 흐름</td>
+  </tr>
+
+  <tr>
+    <th>디자인 방향</th>
+    <td>깔끔한 화이트 배경, 오렌지 포인트, 넓은 여백, 둥근 카드, 일관된 상단 헤더</td>
+  </tr>
+
+  <tr>
+    <th>사용 도구</th>
+    <td>DALL·E(초기 시각화), PowerPoint/Figma(텍스트·레이아웃 후가공), Figma(프로토타입)</td>
+  </tr>
+</tbody>
+
+</table>
+
+<h2>2. 최종 화면 구성</h2>
+
+<table class="screen-table"> <thead> <tr> <th>No.</th> <th>화면</th> <th>주요 구성</th> </tr> </thead>
+
+<tbody>
+  <tr>
+    <td>1</td>
+    <td>메인 페이지</td>
+    <td>브랜드 배너, 카테고리, 추천 상품, 특가 영역</td>
+  </tr>
+
+  <tr>
+    <td>2</td>
+    <td>상품 목록</td>
+    <td>필터, 정렬, 상품 카드 그리드</td>
+  </tr>
+
+  <tr>
+    <td>3</td>
+    <td>상품 상세</td>
+    <td>상품 이미지, 가격, 옵션, 구매 버튼, 상품 정보</td>
+  </tr>
+
+  <tr>
+    <td>4</td>
+    <td>장바구니</td>
+    <td>선택 상품, 수량, 쿠폰, 결제 예정 금액</td>
+  </tr>
+
+  <tr>
+    <td>5</td>
+    <td>주문서 작성</td>
+    <td>배송지, 요청사항, 결제 수단, 주문 요약</td>
+  </tr>
+
+  <tr>
+    <td>6</td>
+    <td>로그인</td>
+    <td>이메일 로그인, 소셜 로그인, 회원가입 이동</td>
+  </tr>
+
+  <tr>
+    <td>7</td>
+    <td>마이페이지</td>
+    <td>주문 상태, 쿠폰, 포인트, 최근 주문</td>
+  </tr>
+
+  <tr>
+    <td>8</td>
+    <td>찜한 상품</td>
+    <td>관심 상품 목록, 카테고리 필터, 장바구니 담기</td>
+  </tr>
+
+  <tr>
+    <td>9</td>
+    <td>이벤트</td>
+    <td>쿠폰팩, 할인 이벤트, 리뷰 적립 이벤트</td>
+  </tr>
+
+  <tr>
+    <td>10</td>
+    <td>고객센터</td>
+    <td>FAQ 검색, 문의 카테고리, 자주 묻는 질문</td>
+  </tr>
+</tbody>
+
+</table>
 
 ---
 
@@ -14,8 +121,17 @@ https://birdcross.github.io/ssagda/
 ---
 
 # png 파일은  
-/src/assets/ 파일 내부로 대체함
-
+/src/assets/고객센터.png
+/src/assets/홈.png
+/src/assets/카테고리.png
+/src/assets/이벤트.png
+/src/assets/로그인.png
+/src/assets/장바구니.png
+/src/assets/주문서작성.png
+/src/assets/패션.png
+/src/assets/디지털.png
+/src/assets/선물.png
+/src/assets/찜.png
 ---
 
 ## 1. 프롬프트 최적화 로그 – 고객센터
@@ -381,3 +497,100 @@ SSAGDA배송/브랜드배송/해외직배송<br>
 화면 3: 결제 예정 금액을 상품 할인·쿠폰 할인으로 분리하고 적립 포인트를 표시, 주문 버튼에 건수·금액을 함께 노출해 결제 직전 확인 절차를 줄임.
 
 화면 4: '선택 상품 주문'·'찜한 상품으로 이동' 보조 버튼과 안전결제 보장 박스(무이자 할부·간편결제·반품정책)를 추가해 결제 신뢰도와 이탈 방지를 함께 높임.
+
+
+  <h2>7. Figma 프로토타입 구성 계획</h2>
+
+  <table class="prototype-table">
+    <thead>
+      <tr>
+        <th>출발 화면</th>
+        <th>클릭 영역</th>
+        <th>도착 화면</th>
+        <th>전환 목적</th>
+      </tr>
+    </thead>
+
+<tbody>
+  <tr>
+    <td>메인 페이지</td>
+    <td>상단 카테고리 / 전체보기</td>
+    <td>상품 목록</td>
+    <td>카테고리별 상품 탐색</td>
+  </tr>
+
+  <tr>
+    <td>메인 페이지</td>
+    <td>추천 상품 카드</td>
+    <td>상품 상세</td>
+    <td>선택 상품 정보 확인</td>
+  </tr>
+
+  <tr>
+    <td>상품 목록</td>
+    <td>상품 카드</td>
+    <td>상품 상세</td>
+    <td>상품 옵션 및 가격 확인</td>
+  </tr>
+
+  <tr>
+    <td>상품 상세</td>
+    <td>장바구니 담기</td>
+    <td>장바구니</td>
+    <td>구매 후보 상품 확인</td>
+  </tr>
+
+  <tr>
+    <td>장바구니</td>
+    <td>주문하기</td>
+    <td>주문서 작성</td>
+    <td>배송지·결제 정보 입력</td>
+  </tr>
+
+  <tr>
+    <td>상단 헤더</td>
+    <td>로그인 / 마이</td>
+    <td>로그인 또는 마이페이지</td>
+    <td>회원 기능 접근</td>
+  </tr>
+
+  <tr>
+    <td>상단 헤더</td>
+    <td>찜 아이콘</td>
+    <td>찜한 상품</td>
+    <td>관심 상품 확인</td>
+  </tr>
+
+  <tr>
+    <td>상단 메뉴</td>
+    <td>이벤트</td>
+    <td>이벤트</td>
+    <td>쿠폰·혜택 확인</td>
+  </tr>
+
+  <tr>
+    <td>고객지원 링크</td>
+    <td>고객센터</td>
+    <td>고객센터</td>
+    <td>FAQ 및 문의 정보 확인</td>
+  </tr>
+</tbody>
+  </table>
+
+  <h3>프로토타입 연결 순서</h3>
+
+  <div class="user-flow">
+    <h4>Main User Flow</h4>
+
+<p>
+  메인 → 상품 목록 → 상품 상세 → 장바구니 → 주문서 작성
+</p>
+
+<p>
+  메인 → 로그인 → 마이페이지
+</p>
+
+<p>
+  메인 → 찜한 상품 / 이벤트 / 고객센터
+</p>
+ </div>
