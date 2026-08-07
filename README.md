@@ -203,6 +203,7 @@ https://birdcross.github.io/ssagda/
 /src/assets/디지털.png
 /src/assets/선물.png
 /src/assets/찜.png
+모든 PNG 파일은 /src/assets/ 포함하여 이미지를 대체함
 ---
 
 ## 1. 프롬프트 최적화 로그 – 고객센터
